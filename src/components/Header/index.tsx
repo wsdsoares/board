@@ -1,15 +1,23 @@
+import Link from 'next/link'
+import { SignInButton } from '../SignInButton';
 import styles from './styles.module.scss';
+
 export function Header(){
   return(
-    <header>
-      <div>
-        <img src="/images/logo.svg" alt="Logo Meu Board" />
-        <a>Home</a>
-        <a>Meu Board</a>
-        
-        <button>
-          Entrar com GitHub
-        </button>
+    <header className={styles.headerContainer}>
+      <div className={styles.headerContent}>
+        <Link href="/">
+          <img src="/images/logo.svg" alt="Logo Meu Board" />
+        </Link>
+        <nav>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+          <Link href="/board">
+            <a>Meu Board</a>
+          </Link>
+        </nav>
+        <SignInButton />
       </div>
     </header>
   );
