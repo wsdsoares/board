@@ -1,6 +1,7 @@
 import  Head  from 'next/head';
 import styles from './styles.module.scss';
 import { FiCalendar, FiTrash, FiEdit2, FiPlus, FiClock } from 'react-icons/fi';
+import { SupportButton } from '../../components/SupportButton';
 
 export default function Board(){
   return(
@@ -55,6 +56,8 @@ export default function Board(){
           </time>
         </div>
       </div>
+
+      <SupportButton />
     </>
   );
 }
